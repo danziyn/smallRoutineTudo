@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <image src="../../img/pulg.jpg" bindtap="btnclick"/>
+    <input 
+      type="text" 
+      placeholder="请输入内容" 
+      value="{{search_mess}}" 
+      bindinput="inputchange"
+      bindconfirm="btnclick"/>
+  </view>
+  <block wx:if="{{leftcount}}">
+    <view class="todus">
+      <view class="item " wx:for="{{todos}}" wx:key="key"  bindtap="controlclick" data-index="{{index}}">
+        <icon class="item_first"  type="{{ item.control ? 'success' : 'circle' }}" />
+        <text class="{{ item.control ? 'active' : ''}}">{{ item.name }}</text>
+        <icon type="clear" catchtap="removeitem" data-index="{{index}}"/>
+      </view>
+    </view>
+    <view class="bottom">
+      <text bindtap="toggleAll">全部</text>
+      <text >{{ leftcount }}个剩下</text>
+      <text bindtap="clearlist">删除</text>
+    </view>
+  </block>
+  <view wx:else>
+    <text class="tiui">
+      null
+    </text>
+  </view>
+</view>

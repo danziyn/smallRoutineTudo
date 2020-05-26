@@ -1,0 +1,70 @@
+/**index.wxss**/
+/* 外部边框 */
+.container {
+  border-top: 1rpx solid #eee;
+}
+
+/* search */
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin: 20rpx;
+}
+
+.search image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx 40rpx 20rpx 20rpx;
+}
+
+/* todus */
+.todus {
+  border: 1rpx solid #eaeaea;
+  border-radius: 5rpx;
+  margin: 20rpx;
+}
+
+.todus .item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+
+.todus .item .item_first {
+  margin-right: 20rpx;
+}
+
+.todus .item text {
+  flex: 1;
+  font-size: 30rpx;
+  color: #888;
+}
+
+.todus .item:last-child{
+  border: none;
+}
+
+/* fotter */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #aaa;
+  margin: 20rpx;
+}
+
+/* 特殊class */
+.active {
+  color: #666;
+  text-decoration: line-through;
+}
+
+/* 提示 */
+.tiui {
+  display: block;
+  color: #333;
+  margin: 20rpx;
+}
